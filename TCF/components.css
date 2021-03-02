@@ -1,0 +1,32 @@
+/*
+    By TheMineWay - Joel Campos
+          Version: 1.0.0
+*/
+
+/* NAV */
+
+.nav ul {display: flex;}
+.nav * {text-decoration: none;}
+.nav-item {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    padding: 0.5em 0.5em;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.nav .brand {
+
+}
+
+/* CARD */
+.card {
+
+}
+
+.card-primary * {
+	
+}

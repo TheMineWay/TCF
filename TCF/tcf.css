@@ -1,0 +1,17 @@
+/*
+    By TheMineWay - Joel Campos
+          Version: 1.0.0
+*/
+
+/* IMPORTS */
+
+@import "colors.css";
+@import "grid.css";
+@import "components.css";
+
+
+/* FONTS */
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');

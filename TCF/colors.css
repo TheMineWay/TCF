@@ -1,0 +1,58 @@
+/*
+    By TheMineWay - Joel Campos
+          Version: 1.0.0
+*/
+
+:root {
+    --color-primary: #304ffe;
+    --color-secondary: #6200ea;
+    --color-success: green;
+    --color-warning: yellow;
+    --color-danger: red;
+    --color-ligth: white;
+    --color-dark: black;
+
+    /* COMPLEMENTARY */
+    --color-complementary: #00c853;
+}
+
+/* BACKGROUND */
+
+.bg-primary {background-color: var(--color-primary);}
+.bg-secondary {background-color: var(--color-secondary);}
+.bg-success {background-color: var(--color-success);}
+.bg-warning {background-color: var(--color-warning);}
+.bg-danger {background-color: var(--color-danger);}
+.bg-complementary{background-color: var(--color-complementary);}
+.bg-ligth {background-color: var(--color-ligth);}
+.bg-dark {background-color: var(--color-dark);}
+
+/* TEXT */
+
+.text-primary {color: var(--color-primary);}
+.text-secondary {color: var(--color-secondary);}
+.text-success {color: var(--color-success);}
+.text-warning {color: var(--color-warning);}
+.text-danger {color: var(--color-danger);}
+.text-complementary {color: var(--color-complementary)}
+.text-ligth {color: var(--color-ligth);}
+.text-dark {color: var(--color-dark);}
+
+/* NAV */
+.nav-primary {background-color: var(--color-primary);}
+.nav-secondary {background-color: var(--color-secondary);}
+.nav-success {background-color: var(--color-success);}
+.nav-warning {background-color: var(--color-warning);}
+.nav-danger {background-color: var(--color-danger);}
+.nav-complementary {background-color: var(--color-complementary);}
+.nav-ligth {background-color: var(--color-ligth);}
+.nav-dark {background-color: var(--color-dark);}
+
+.nav-primary * {color: var(--color-ligth);}
+.nav-secondary * {color: var(--color-ligth);}
+.nav-success * {color: var(--color-ligth);}
+.nav-warning * {color: var(--color-ligth);}
+.nav-danger * {color: var(--color-ligth);}
+.nav-complementary * {color: var(--color-ligth);}
+.nav-ligth * {color: var(--color-dark);}
+.nav-dark * {color: var(--color-ligth);}
