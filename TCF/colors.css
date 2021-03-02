@@ -14,6 +14,20 @@
 
     /* COMPLEMENTARY */
     --color-complementary: #00c853;
+
+    /* OTHER */
+    --color-gray: gray;
+
+    /* CONTRAST COLORS */
+    --color-contrast-primary: var(--color-ligth);
+    --color-contrast-secondary: var(--color-ligth);
+    --color-contrast-success: var(--color-ligth);
+    --color-contrast-warning: var(--color-ligth);
+    --color-contrast-danger: var(--color-ligth);
+    --color-contrast-ligth: var(--color-dark);
+    --color-contrast-dark: var(--color-ligth);
+
+    --color-contrast-complementary: var(--color-ligth);
 }
 
 /* BACKGROUND */
@@ -48,11 +62,21 @@
 .nav-ligth {background-color: var(--color-ligth);}
 .nav-dark {background-color: var(--color-dark);}
 
-.nav-primary * {color: var(--color-ligth);}
-.nav-secondary * {color: var(--color-ligth);}
-.nav-success * {color: var(--color-ligth);}
-.nav-warning * {color: var(--color-ligth);}
-.nav-danger * {color: var(--color-ligth);}
-.nav-complementary * {color: var(--color-ligth);}
-.nav-ligth * {color: var(--color-dark);}
-.nav-dark * {color: var(--color-ligth);}
+.nav-primary * {color: var(--color-contrast-primary);}
+.nav-secondary * {color: var(--color-contrast-secondary);}
+.nav-success * {color: var(--color-contrast-success);}
+.nav-warning * {color: var(--color-contrast-warning);}
+.nav-danger * {color: var(--color-contrast-danger);}
+.nav-complementary * {color: var(--color-contrast-complementary);}
+.nav-ligth * {color: var(--color-contrast-ligth);}
+.nav-dark * {color: var(--color-contrast-dark);}
+
+/* CARD */
+.card-primary > .card-header {background-color: var(--color-primary);color: var(--color-contrast-primary);}
+.card-secondary > .card-header {background-color: var(--color-secondary);color: var(--color-contrast-secondary);}
+.card-success > .card-header {background-color: var(--color-success);color: var(--color-contrast-success);}
+.card-warning > .card-header {background-color: var(--color-warning);color: var(--color-contrast-warning);}
+.card-danger > .card-header {background-color: var(--color-danger);color: var(--color-contrast-danger);}
+.card-complementary > .card-header {background-color: var(--color-complementary);color: var(--color-contrast-complementary);}
+.card-ligth > .card-header {background-color: var(--color-ligth);color: var(--color-contrast-ligth);}
+.card-dark > .card-header {background-color: var(--color-dark);color: var(--color-contrast-dark);}

@@ -14,7 +14,11 @@
     padding: 0.5em 0.5em;
 }
 
-.active {
+.nav-item.disabled {
+    
+}
+
+.nav-item.active {
 	font-weight: bold;
 }
 
@@ -24,9 +28,14 @@
 
 /* CARD */
 .card {
-
+    border-style: solid;
+    border-color: var(--color-gray);
+    border-radius: 0.5em;
 }
-
-.card-primary * {
-	
+.card > .card-header {
+    padding: 0px 0px;
+    border-bottom: solid;
+}
+.card > .card-body {
+    
 }
