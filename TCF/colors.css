@@ -11,8 +11,6 @@
     --color-danger: red;
     --color-ligth: white;
     --color-dark: black;
-
-    /* COMPLEMENTARY */
     --color-complementary: #00c853;
 
     /* OTHER */
@@ -90,13 +88,3 @@
 .btn-complementary {background-color: var(--color-complementary);color: var(--color-contrast-complementary); border-color: var(--color-complementary);}
 .btn-ligth {background-color: var(--color-ligth);color: var(--color-contrast-ligth); border-color: var(--color-ligth);}
 .btn-dark {background-color: var(--color-dark);color: var(--color-contrast-dark); border-color: var(--color-dark);}
-
-/* INPUT */
-.input-primary {border-color: var(--color-primary);}
-.input-secondary {border-color: var(--color-secondary);}
-.input-success {border-color: var(--color-success);}
-.input-warning {border-color: var(--color-warning);}
-.input-danger {border-color: var(--color-danger);}
-.input-complementary {border-color: var(--color-complementary);}
-.input-ligth {border-color: var(--color-ligth);}
-.input-dark {border-color: var(--color-dark);}

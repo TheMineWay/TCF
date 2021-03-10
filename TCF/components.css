@@ -38,7 +38,7 @@
     border-bottom: solid;
 }
 .card > .card-body {
-    
+    margin: 1em 1em;
 }
 
 /* BUTTONS */
@@ -76,6 +76,31 @@
 .btn-complementary {border-color: var(--color-complementary);}
 
 /* FORMS */
-.form-control {
-    
+.form-control::after {
+    content: "";
+    clear: both;
+    display: table;
 }
+.form-control > * {
+    float:left;
+    width: 100%;
+}
+
+input.input {
+    border-radius: var(--common-btn-border);
+    border-width: var(--common-input-border);
+    outline: none;
+}
+input.input.fade {
+    transition-duration: var(--common-input-transition-delay);
+}
+
+/* INPUT */
+.input-primary:focus {border-color: var(--color-primary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-primary);}
+.input-secondary:focus {border-color: var(--color-secondary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-secondary);}
+.input-success:focus {border-color: var(--color-success);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-success);}
+.input-warning:focus {border-color: var(--color-warning);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-warning);}
+.input-danger:focus {border-color: var(--color-danger);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-danger);}
+.input-complementary:focus {border-color: var(--color-complementary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-complementary);}
+.input-ligth:focus {border-color: var(--color-ligth);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-ligth);}
+.input-dark:focus {border-color: var(--color-dark);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-dark);}

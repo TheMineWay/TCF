@@ -98,7 +98,7 @@
     margin-right: 0%;
 }
 
-/* DEFAUKT CONTAINER */
+/* DEFAULT CONTAINER */
 @media only screen and (min-width: 476px) {
     .container {
         margin-left: 15%;
@@ -133,3 +133,9 @@
         margin-right: 15%;
     }
 }
+
+/* SPACING */
+.mb-1 {padding-bottom: 0.25em;}
+.mb-2 {padding-bottom: 0.5em;}
+.mb-3 {padding-bottom: 0.75em;}
+.mb-4 {padding-bottom: 1em;}
