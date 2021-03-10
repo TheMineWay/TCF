@@ -9,9 +9,24 @@
 @import "grid.css";
 @import "components.css";
 
+/* ICONS */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 
 /* FONTS */
 * {
 	font-family: 'Open Sans', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* COMMON SIZES */
+:root {
+    --common-round-size: 0.5em;
+    --common-btn-round-size: 0.25em;
+
+    --common-btn-border: 0.2em;
+
+    --common-btn-transition-delay: 0.4s;
+    /* DISABLED ELEMENTS */
+    --common-disabled-opacity: 70%;
+}

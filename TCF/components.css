@@ -15,7 +15,7 @@
 }
 
 .nav-item.disabled {
-    
+    opacity: var(--common-disabled-opacity);
 }
 
 .nav-item.active {
@@ -30,12 +30,52 @@
 .card {
     border-style: solid;
     border-color: var(--color-gray);
-    border-radius: 0.5em;
+    border-radius: var(--common-round-size);
 }
 .card > .card-header {
     padding: 0px 0px;
+    margin: 0px 0px;
     border-bottom: solid;
 }
 .card > .card-body {
+    
+}
+
+/* BUTTONS */
+.btn {
+    border-radius: var(--common-btn-round-size);
+}
+.btn:hover {
+    outline-width: var(--common-btn-border);
+    opacity: 90%;
+}
+
+/* BTN FADE */
+.btn.fade {
+    transition-duration: var(--common-btn-transition-delay);
+    background-color: var(--color-ligth);
+    color: var(--color-dark);
+    opacity: 100%;
+}
+.btn.btn-primary.fade:hover { background-color: var(--color-primary); color: var(--color-contrast-primary);}
+.btn.btn-secondary.fade:hover { background-color: var(--color-secondary); color: var(--color-contrast-secondary);}
+.btn.btn-success.fade:hover { background-color: var(--color-success); color: var(--color-contrast-success);}
+.btn.btn-warning.fade:hover { background-color: var(--color-warning); color: var(--color-contrast-warning);}
+.btn.btn-danger.fade:hover { background-color: var(--color-danger); color: var(--color-contrast-danger);}
+.btn.btn-ligth.fade:hover { background-color: var(--color-ligth); color: var(--color-contrast-ligth);}
+.btn.btn-dark.fade:hover { background-color: var(--color-dark); color: var(--color-contrast-dark);}
+.btn.btn-complementary.fade:hover { background-color: var(--color-complementary); color: var(--color-contrast-complementary);}
+
+.btn-primary {border-color: var(--color-primary);}
+.btn-secondary {border-color: var(--color-secondary);}
+.btn-success {border-color: var(--color-success);}
+.btn-warning {border-color: var(--color-warning);}
+.btn-danger {border-color: var(--color-danger);}
+.btn-ligth {border-color: var(--color-ligth);}
+.btn-dark {border-color: var(--color-dark);}
+.btn-complementary {border-color: var(--color-complementary);}
+
+/* FORMS */
+.form-control {
     
 }
