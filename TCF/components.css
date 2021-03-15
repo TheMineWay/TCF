@@ -22,12 +22,56 @@
 	font-weight: bold;
 }
 
+.nav-dropdown {
+    list-style-type: none;
+    text-align: center;
+    padding: 0.5em 0.5em;
+    position: relative;
+    display: inline-block;
+}
+.nav-dropdown:hover {cursor: pointer;}
+.nav-dropdown:hover .dropdown-content {display: block;}
+
+.nav-primary .dropdown-content {background-color: var(--color-primary);}
+.nav-secondary .dropdown-content {background-color: var(--color-secondary);}
+.nav-success .dropdown-content {background-color: var(--color-success);}
+.nav-warning .dropdown-content {background-color: var(--color-warning);}
+.nav-danger .dropdown-content {background-color: var(--color-danger);}
+.nav-complementary .dropdown-content {background-color: var(--color-complementary);}
+.nav-ligth .dropdown-content {background-color: var(--color-ligth);}
+.nav-dark .dropdown-content {background-color: var(--color-dark);}
+
 .nav .brand {
 
 }
 
+/* MOBILE NAV */
+/*[class*="nav-toggle"] {
+    display: block;
+}*/
+
+@media only screen and (min-width: 476px) {.nav-toggle {display: none;}}
+@media only screen and (min-width: 576px) {.nav-toggle-sm {display: none;}}
+@media only screen and (min-width: 768px) {.nav-toggle-md {display: none;}}
+@media only screen and (min-width: 992px) {.nav-toggle-lg {display: none;}}
+@media only screen and (min-width: 1200px) {.nav-toggle-xl {display: none;}}
+
+/* DROPDOWN */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content * {
+    padding-top: var(--common-dropdown-padding);
+}
+
 /* CARD */
 .card {
+    border-width: var(--common-card-border);
     border-style: solid;
     border-color: var(--color-gray);
     border-radius: var(--common-round-size);
@@ -86,21 +130,27 @@
     width: 100%;
 }
 
-input.input {
+.input, .select {
     border-radius: var(--common-btn-border);
     border-width: var(--common-input-border);
     outline: none;
 }
-input.input.fade {
+.input.fade, .select.fade {
     transition-duration: var(--common-input-transition-delay);
 }
 
-/* INPUT */
-.input-primary:focus {border-color: var(--color-primary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-primary);}
-.input-secondary:focus {border-color: var(--color-secondary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-secondary);}
-.input-success:focus {border-color: var(--color-success);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-success);}
-.input-warning:focus {border-color: var(--color-warning);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-warning);}
-.input-danger:focus {border-color: var(--color-danger);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-danger);}
-.input-complementary:focus {border-color: var(--color-complementary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-complementary);}
-.input-ligth:focus {border-color: var(--color-ligth);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-ligth);}
-.input-dark:focus {border-color: var(--color-dark);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-dark);}
+/* INPUT & SELECT */
+.input-primary:focus, .select.select-primary:focus {border-color: var(--color-primary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-primary);}
+.input-secondary:focus, .select.select-secondary:focus {border-color: var(--color-secondary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-secondary);}
+.input-success:focus, .select.select-success:focus {border-color: var(--color-success);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-success);}
+.input-warning:focus, .select.select-warning:focus {border-color: var(--color-warning);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-warning);}
+.input-danger:focus, .select.select-danger:focus {border-color: var(--color-danger);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-danger);}
+.input-complementary:focus, .select.select-complementary:focus {border-color: var(--color-complementary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-complementary);}
+.input-ligth:focus, .select.select-ligth:focus {border-color: var(--color-ligth);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-ligth);}
+.input-dark:focus, .select.select-dark:focus {border-color: var(--color-dark);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-dark);}
+
+/* INFO BOX */
+.infobox {border-left-style: solid;border-left-width: var(--common-infobox-border);}
+.infobox > .infobox-body {margin-left: var(--common-infobox-margin);margin-right: var(--common-infobox-margin);padding-bottom: 0.2em;}
+.infobox > .infobox-header > * {padding-top: var(--common-infobox-header-v-padding);padding-bottom: var(--common-infobox-header-v-padding);}
+.infobox > .infobox-header > * {margin-left: var(--common-infobox-margin);}

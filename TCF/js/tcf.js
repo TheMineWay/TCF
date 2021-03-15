@@ -20,3 +20,11 @@ function TogglePassword(btn, field) {
         fielddoc.setAttribute("type","password");
     }
 }
+
+let navs = {};
+
+function NavToggle(id) {
+    if(!(id in navs)) navs[id] = true;
+    const navList = document.getElementById(id);
+    
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TCF Web</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="TCF/tcf.css">
+    </head>
+    <body>
+        <nav class="nav nav-primary">
+            <h1 class="brand">Welcome to the TCF page!</h1>
+            <div class="nav-toggle" onclick="NavToggle('main-nav')">
+                <a class="material-icons">menu</a>
+            </div>
+            <ul id="main-nav" class="nav-list">
+                <li class="nav-item active"><a href="/">Main</a></li>
+                <li class="nav-item"><a href="">Secondary</a></li>
+                <li class="nav-item disabled"><a href="">Disabled</a></li>
+                <li class="nav-dropdown">
+                    Dropdown
+                    <div class="dropdown-content">
+                        <p>Hola!</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="container-md text-primary">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h1>Formulario</h1>
+                        </div>
+                        <div class="card-body text-dark">
+                            <form class="row">
+                                <div class="col-md-6">
+                                    <div class="form-control mb-2">
+                                        <label>Email</label>
+                                        <input type="email" class="input input-primary">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-control mb-2">
+                                        <label>Contraseña</label>
+                                        <input type="password" class="input input-primary" id="password-input">
+                                    </div>
+                                    <button onclick="TogglePassword('password-button','password-input')" id="password-button" class="material-icons btn btn-primary">visibility_off</button>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-control">
+                                        <label>Idioma</label>
+                                        <select class="select select-primary">
+                                            <option>Español</option>
+                                            <option>English</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="tcf/js/tcf.js"></script>
+    </body>
+</html>

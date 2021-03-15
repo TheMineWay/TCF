@@ -7,20 +7,20 @@
     --color-primary: #304ffe;
     --color-secondary: #6200ea;
     --color-success: green;
-    --color-warning: yellow;
+    --color-warning: rgb(231, 231, 79);
     --color-danger: red;
     --color-ligth: white;
     --color-dark: black;
     --color-complementary: #00c853;
 
     /* OTHER */
-    --color-gray: gray;
+    --color-gray: rgb(156, 156, 156);
 
     /* CONTRAST COLORS */
     --color-contrast-primary: var(--color-ligth);
     --color-contrast-secondary: var(--color-ligth);
     --color-contrast-success: var(--color-ligth);
-    --color-contrast-warning: var(--color-ligth);
+    --color-contrast-warning: var(--color-dark);
     --color-contrast-danger: var(--color-ligth);
     --color-contrast-ligth: var(--color-dark);
     --color-contrast-dark: var(--color-ligth);
@@ -88,3 +88,7 @@
 .btn-complementary {background-color: var(--color-complementary);color: var(--color-contrast-complementary); border-color: var(--color-complementary);}
 .btn-ligth {background-color: var(--color-ligth);color: var(--color-contrast-ligth); border-color: var(--color-ligth);}
 .btn-dark {background-color: var(--color-dark);color: var(--color-contrast-dark); border-color: var(--color-dark);}
+
+/* INFOBOX */
+.infobox.infobox-primary {border-left-color: var(--color-primary);}
+.infobox.infobox-primary > .infobox-header {background-color: var(--color-primary);color: var(--color-contrast-primary);}
