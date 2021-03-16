@@ -154,3 +154,11 @@
 .infobox > .infobox-body {margin-left: var(--common-infobox-margin);margin-right: var(--common-infobox-margin);padding-bottom: 0.2em;}
 .infobox > .infobox-header > * {padding-top: var(--common-infobox-header-v-padding);padding-bottom: var(--common-infobox-header-v-padding);}
 .infobox > .infobox-header > * {margin-left: var(--common-infobox-margin);}
+
+/* SLIDESHOW */
+.slideshow-item {
+    display:none;
+}
+.slideshow {
+
+}

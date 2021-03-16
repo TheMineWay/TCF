@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ebank - Auth</title>
+		<link rel="stylesheet" type="text/css" href="../TCF/tcf.css">
+	</head>
+	<body>
+		<!-- NAVEGACIÓN -->
+        <nav class="nav nav-primary">
+            <ul class="main-nav">
+                <li class="nav-item active">Menú principal</li>
+                <li class="nav-item">Tarifas</li>
+                <li class="nav-dropdown">
+                    Cuenta
+                    <div class="dropdown-content">
+                        <p>Acceder</p>
+                        <p>Perfil</p>
+                        <p>Cerrar sesión</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- FORMULARIO -->
+       	<section class="container-lg">
+       		<div>
+       			<h2>Crear cuenta</h2>
+       			<hr>
+       			<div class="row">
+       				<div class="col-lg-6">
+       					<div class="form-control">
+       						<label for="r-email">Correo electrónico</label>
+       						<input type="email" id="r-email" class="input input-primary">
+       					</div>
+       				</div>
+       				<div class="col-lg-6">
+       					<div class="form-control">
+       						<label for="r-name">Nombre completo</label>
+       						<input type="text" id="r-name" class="input input-primary">
+       					</div>
+       				</div>
+       				<div class="col-lg-6">
+       					<div class="row">
+       						<div class="col-lg-10">
+       							<div class="form-control">
+		       						<label for="r-password">Contraseña</label>
+		       						<input type="password" id="r-password" class="input input-primary">
+       							</div>
+       						</div>
+       						<div class="col-lg-2">
+       								<button class="btn btn-primary material-icons" id="btn-password" onclick="TogglePassword('btn-password','r-password')">visibility_off</button>
+       							</div>
+       					</div>
+       				</div>
+       			</div>
+       		</div>
+       	</section>
+
+        <script src="../TCF/js/tcf.js"></script>
+	</body>
+</html>
