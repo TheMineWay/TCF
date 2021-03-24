@@ -13,8 +13,7 @@
 [class*="col-"] {
     width: 100%;
 }
-/*[class*="col-"] + [class*="col-"] > * {margin-left: 0.5em}*/
-[class*="col-"] > * {margin-left: 0.5em; margin-right: 0.5em;}
+[class*="col"] > * {margin-right: 1em;}
 
 /* DEFAULT GRID (smallest) */
 @media only screen and (min-width: 476px) {

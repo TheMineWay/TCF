@@ -9,6 +9,9 @@
 @import "grid.css";
 @import "components.css";
 
+/* REBOOT */
+@import "bootstrap-reboot.css";
+
 /* ICONS */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -24,7 +27,7 @@ p {font-size: large}
 /* COMMON SIZES */
 :root {
     /* ROUND SIZES */
-    --common-round-size: 0.5em;
+    --common-round-size: 1em;
     --common-btn-round-size: 0.25em;
 
     /* BORDERS */
@@ -36,6 +39,7 @@ p {font-size: large}
     /* TRANSITION DELAYS */
     --common-btn-transition-delay: 0.4s;
     --common-input-transition-delay: 0.4s;
+    --common-img-transition-delay: 0.4s;
 
     /* DISABLED ELEMENTS */
     --common-disabled-opacity: 70%;

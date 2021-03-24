@@ -92,3 +92,6 @@
 /* INFOBOX */
 .infobox.infobox-primary {border-left-color: var(--color-primary);}
 .infobox.infobox-primary > .infobox-header {background-color: var(--color-primary);color: var(--color-contrast-primary);}
+
+/* RANGLE */
+.rangle.rangle-primary {background-color: var(--color-primary); color: var(--color-contrast-primary);}

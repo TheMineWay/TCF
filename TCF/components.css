@@ -80,6 +80,9 @@
     padding: 0px 0px;
     margin: 0px 0px;
     border-bottom: solid;
+    border-top-left-radius: var(--common-round-size);
+    border-top-right-radius: var(--common-round-size);
+    border-width: var(--common-card-border);
 }
 .card > .card-body {
     margin: 1em 1em;
@@ -154,6 +157,7 @@
 .infobox > .infobox-body {margin-left: var(--common-infobox-margin);margin-right: var(--common-infobox-margin);padding-bottom: 0.2em;}
 .infobox > .infobox-header > * {padding-top: var(--common-infobox-header-v-padding);padding-bottom: var(--common-infobox-header-v-padding);}
 .infobox > .infobox-header > * {margin-left: var(--common-infobox-margin);}
+.infobox p {font-size: medium;}
 
 /* SLIDESHOW */
 .slideshow-item {
@@ -162,3 +166,11 @@
 .slideshow {
 
 }
+
+/* RANGLE */
+.rangle .rangle-body > * {margin: 20px 20px;}
+
+/* IMAGES */
+.autoimage {width: 100%;}
+.zoomable {transition-duration: var(--common-img-transition-delay);}
+img.zoomable:hover {transform: scale(1.075);}
