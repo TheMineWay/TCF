@@ -95,3 +95,6 @@
 
 /* RANGLE */
 .rangle.rangle-primary {background-color: var(--color-primary); color: var(--color-contrast-primary);}
+
+/* CHECKBOX */
+.checkbox.checkbox-primary {color: var(--color-primary);}

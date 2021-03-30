@@ -42,6 +42,9 @@
 
 }
 
+/* Link style */
+a.nolink:hover {color: var(--color-ligth);}
+
 /* MOBILE NAV */
 /*[class*="nav-toggle"] {
     display: block;
@@ -140,6 +143,8 @@
 }
 .necessary::after {color: red;content: "*";font-weight: bold;}
 
+.classic-terms * {display: inline;}
+
 /* INPUT & SELECT */
 .input-primary:focus, .select.select-primary:focus {border-color: var(--color-primary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-primary);}
 .input-secondary:focus, .select.select-secondary:focus {border-color: var(--color-secondary);box-shadow: 0.05em 0.05em 0.1em 0.1em var(--color-secondary);}
@@ -174,3 +179,18 @@
 img.zoomable:hover {transform: scale(1.075);}
 
 .expo {padding-left: 0.4em;padding-right: 0.4em; padding-bottom: 0.4em;}
+
+/* ENTRY LIST */
+.entrylist {}
+.entrylist .entry {border: solid;}
+.entrylist > .entry > * {margin: 0.1em 0.1em 0.1em 0.1em;display: inline;}
+
+.entry > .title {font-weight: bold;}
+.entry > .subject::before {content: "\\ ";}
+.entry > .value.good {color: var(--color-success);}
+.entry > .value.bad {color: var(--color-danger);}
+
+/* El checkbox desaparece si la pantalla es demasiado pequeña */
+@media only screen and (max-width: 476px) {
+    .entry input[type="checkbox"] {display: none;}
+}
