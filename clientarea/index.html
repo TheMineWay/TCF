@@ -29,22 +29,62 @@
         <section class="container-md">
             <h3>Zona cliente</h3>
             <hr>
+            <div class="toolbar toolbar-primary">
+                <p class="material-icons">delete</p>
+                <p class="material-icons">update</p>
+                <p class="material-icons">assignment_ind</p>
+                <p class="material-icons">get_app</p>
+                <p class="material-icons">send</p>
+                <p class="material-icons">assessment</p>
+                <p class="material-icons">donut_large</p>
+                <p class="material-icons">label_important</p>
+                <p class="material-icons">pending</p>
+            </div>
             <div class="row">
                 <div class="col-xl-9">
                     <div class="entrylist" id="entries">
+                        <!-- Si se muestra esta "entry" es que ha habido un problema con el script -->
                         <div class="entry">
                             <input type="checkbox" class="checkbox">
-                            <p class="title">Título 1</p>
-                            <p class="value good">200€</p>
-                            <p class="subject">Asunto</p>
+                            <p class="title">Cobro</p>
+                            <p class="value good">-200€</p>
+                            <p class="subject">Este texto no se debería ver, ha habido un fallo con un script</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3">
-                    <div class="rangle rangle-primary">
+                <div class="col-xl-3 bg-primary text-ligth">
+                    <div class="rangle primary">
                         <div class="rangle-body">
-                            <h5>Cuentas enlazadas</h5>
+                            <h5><b>Cuentas enlazadas</b></h5>
+                            <hr>
+                            <div id="accounts">
+
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="rangle rangle-primary">
+                <div class="rangle-body">
+                    <div class="row" style="padding-top: 0.7em;padding-bottom: 0.5em;">
+                        <div class="col-xl-2">
+                            <div class="form-control">
+                                <input type="month" class="input" style="width: 100%;" id="mes">
+                            </div>
+                        </div>
+                        <div class="col-xl-10">
+                            <h5>Resumen de tu actividad</h5>
+                        </div>
+                    </div>
+                    <div class="container-xl">
+                        <!-- RESUMEN MENSUAL -->
+                        <table class="graphic">
+                            <div style="width: 100%;" class="bg-success"><p class="text-ligth">Ingresos (5681€)</p></div>
+                            <div style="width: 82%;" class="bg-danger"><p class="text-ligth">Otros (4323€)</p></div>
+                            <div style="width: 15%;" class="bg-danger"><p class="text-ligth">Teléfono (39€)</p></div>
+                            <div style="width: 12%;" class="bg-danger"><p class="text-ligth">Ocio (25€)</p></div>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -55,6 +95,9 @@
         <script src="../TCF/js/database.js"></script>
         <script>
             DisplayData();
+            DisplayAccounts();
+
+            document.getElementById("mes").valueAsDate = new Date(); // Seleccionar hoy por defecto
         </script>
     </body>
 </html>

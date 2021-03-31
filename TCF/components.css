@@ -1,6 +1,10 @@
 /*
-    By TheMineWay - Joel Campos
-          Version: 1.0.0
+        By TheMineWay - Joel Campos
+              Version: 1.0.0
+
+    Hay gran cantidad de componentes que
+    al  final no  he utilizado  pero que
+    me daba pena borrar.
 */
 
 /* NAV */
@@ -183,14 +187,26 @@ img.zoomable:hover {transform: scale(1.075);}
 /* ENTRY LIST */
 .entrylist {}
 .entrylist .entry {border: solid;}
+.entry + .entry {border-top: none;}
 .entrylist > .entry > * {margin: 0.1em 0.1em 0.1em 0.1em;display: inline;}
 
+.entry:hover {cursor: pointer;}
 .entry > .title {font-weight: bold;}
 .entry > .subject::before {content: "\\ ";}
 .entry > .value.good {color: var(--color-success);}
 .entry > .value.bad {color: var(--color-danger);}
 
+
 /* El checkbox desaparece si la pantalla es demasiado pequeña */
 @media only screen and (max-width: 476px) {
     .entry input[type="checkbox"] {display: none;}
 }
+
+/* TOOLBAR */
+.toolbar > * {display: inline;}
+.toolbar > *:hover {cursor: pointer;}
+.toolbar.vertical > * {display: block;}
+
+/* GRAPHIC */
+.graphic {width: 100%;}
+.graphic * {padding: 0.2em 0.2em 0.2em 0.2em};

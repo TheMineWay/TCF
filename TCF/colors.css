@@ -6,9 +6,9 @@
 :root {
     --color-primary: #304ffe;
     --color-secondary: #6200ea;
-    --color-success: green;
+    --color-success: rgb(34, 139, 34);
     --color-warning: rgb(231, 231, 79);
-    --color-danger: red;
+    --color-danger: rgb(255, 57, 57);
     --color-ligth: white;
     --color-dark: black;
     --color-complementary: #00c853;
@@ -98,3 +98,10 @@
 
 /* CHECKBOX */
 .checkbox.checkbox-primary {color: var(--color-primary);}
+
+/* ENTRY */
+.entry.entry-primary {border-color: var(--color-primary);}
+.entry.entry-primary:hover {background-color: var(--color-primary); color: var(--color-contrast-primary);}
+
+/* TOOLBAR */
+.toolbar.toolbar-primary > *:hover {color: var(--color-primary);}

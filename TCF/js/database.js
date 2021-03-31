@@ -3,7 +3,28 @@
 */
 
 const BBDD = {
-    money: 12891,
+    accounts: [
+        {
+            iban:"ES4731902366783335241844",
+            money:12290
+        },
+        {
+            iban:"ES1100754577144899982828",
+            money:14
+        },
+        {
+            iban:"ES0801826128464622246561",
+            money:249
+        },
+        {
+            iban:"ES8530047233958243219567",
+            money:1982
+        },
+        {
+            iban:"ES4714659664568563971247",
+            money:44298
+        }
+    ],
     entries: [
         {
             title: "Vodafone",
@@ -69,12 +90,20 @@ function DisplayData() {
         let good = entry.money > 0 ? "good" : "bad";
         if(entry.money == 0) good = "";
         entries.innerHTML += `
-        <div class="entry">
+        <div class="entry entry-primary">
             <input type="checkbox" class="checkbox">
             <p class="title">${entry.title}</p>
             <p class="value ${good}">${entry.money}€</p>
             <p class="subject">${entry.details}</p>
             <p class="title">${entry.date}</p>
         </div>`;
+    }
+}
+
+function DisplayAccounts() {
+    const accounts = document.getElementById("accounts");
+    accounts.innerHTML = "";
+    for(account of BBDD.accounts) {
+        accounts.innerHTML += `<h5><a href="?account=${account.iban}" class="nolink text-ligth" style="text-decoration: none;">${account.iban}</a> - <span style="font-weight: bold;">${account.money}€</span></h5>`;
     }
 }

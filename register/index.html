@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ebank - Auth</title>
+		<link rel="stylesheet" type="text/css" href="../TCF/tcf.css">
+	</head>
+	<body>
+		<!-- NAVEGACIÓN -->
+        <nav class="nav nav-primary">
+            <ul class="main-nav">
+                <li class="nav-item active"><a href="../index.html">Menú principal</a></li>
+                <li class="nav-item">Tarifas</li>
+                <li class="nav-dropdown">
+                    Cuenta
+                    <div class="dropdown-content">
+                        <p><a href="index.html">Crear cuenta</a></p>
+                        <p><a href="../login/index.html">Acceder</a></p>
+                        <p>Cerrar sesión</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- FORMULARIO -->
+       	<section class="container-lg">
+       		<form>
+       			<h2>Crear cuenta</h2>
+       			<hr>
+       			<div class="row">
+					<!-- EMAIL -->
+       				<div class="col-lg-6">
+       					<div class="form-control">
+       						<label for="r-email" class="necessary">Correo electrónico</label>
+       						<input type="email" id="r-email" class="input input-primary" required>
+       					</div>
+       				</div>
+					<!-- NOMBRE -->
+       				<div class="col-lg-6">
+       					<div class="form-control">
+       						<label for="r-name" class="necessary">Nombre completo</label>
+       						<input type="text" id="r-name" class="input input-primary" required>
+       					</div>
+       				</div>
+					<!-- CONTRASEÑA 1 -->
+       				<div class="col-lg-6">
+       					<div class="row">
+       						<div class="col-lg-10">
+       							<div class="form-control">
+		       						<label for="r-password" class="necessary">Contraseña</label>
+		       						<input type="password" id="r-password" class="input input-primary" style="width: 100%;" required>
+       							</div>
+       						</div>
+       						<div class="col-lg-2"><br>
+								<button type="button" style="width: 100%;" class="btn btn-primary material-icons" id="btn-password" onclick="TogglePassword('btn-password','r-password')">visibility_off</button>
+							</div>
+       					</div>
+       				</div>
+					<!-- CONTRASEÑA 2 -->
+       				<div class="col-lg-6">
+						<div class="row">
+							<div class="col-lg-10">
+								<div class="form-control">
+									<label for="r-password" class="necessary">Repetir contraseña</label>
+									<input type="password" id="r-password-again" class="input input-primary" style="width: 100%;" required>
+								</div>
+							</div>
+							<div class="col-lg-2"><br>
+								<button type="button" style="width: 100%;" class="btn btn-primary material-icons" id="btn-password-again" onclick="TogglePassword('btn-password-again','r-password-again')">visibility_off</button>
+						 	</div>
+						</div>
+					</div>
+					<div>
+						<!-- INFORMACIÓN PERSONAL -->
+						<fieldset class="col-lg-6 mb-2">
+							<legend class="necessary">Información personal</legend>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="dni">DNI</label>
+										<input type="text" id="dni" class="input input-primary" maxlength="9" pattern="[0-9]{8}[a-Z]{1}" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="birth">Fecha de nacimiento</label>
+										<input type="date" id="birth" class="input input-primary" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="country">País</label>
+										<select id="country" class="input input-primary"> <!-- La clase "input" es compatible con "select" --></select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="region">Región</label>
+										<select id="region" class="input input-primary"> <!-- La clase "input" es compatible con "select" --></select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="dir">Dirección</label><br>
+										<input type="text" id="dir" class="input input-primary" style="width: 100%;">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="cp">Código postal</label><br>
+										<input type="text" id="cp" maxlength="5" class="input input-primary" style="width: 100%;" pattern="[0-9]{5}">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-control">
+										<label for="tel">Teléfono</label><br>
+										<input type="text" id="tel" class="input input-primary" style="width: 100%;" maxlength="9" pattern="[0-9]{9}">
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<!-- ANUNCIO -->
+						<div class="col-md-6">
+							<div class="rangle rangle-primary">
+								<div class="row">
+									<div class="col-12 rangle-body">
+										<h3>Sin gastos de alta</h3>
+										<p>¡Abre tu cuenta desde casa sin necesidad de pagar nada!<br>Una vez tienes tu cuenta, puedes realizar operaciones desde cualquier dispositivo conectado a la red de forma totalmente segura.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="classic-terms">
+								<input type="checkbox" id="terms" class="checkbox checkbox-primary" required>
+								<label for="terms" class="necessary">Acepto los términos y condiciones de uso</label>
+							</div>
+							<input type="submit" value="Crear cuenta" class="btn btn-primary">
+						</div>
+					</div>
+       			</div>
+			</form>
+       	</section>
+        <script src="../TCF/js/tcf.js"></script>
+		<script src="../TCF/js/cartograph.js"></script>
+
+		<!-- Page's script -->
+		<script>
+			ImplementFullLocationForm("country","region");
+		</script>
+	</body>
+</html>

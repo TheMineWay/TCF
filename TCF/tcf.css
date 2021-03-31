@@ -5,9 +5,9 @@
 
 /* IMPORTS */
 
-@import "colors.css";
 @import "grid.css";
 @import "components.css";
+@import "colors.css";
 
 /* REBOOT */
 @import "bootstrap-reboot.css";
