@@ -216,5 +216,16 @@ img.zoomable:hover {transform: scale(1.075);}
 .table {
     border: solid;
 }
+.table th {padding: 0.3em 0.3em 0.3em 0.3em;}
 .table * {text-align: center;}
 .table.selectable tr:hover {background-color: var(--color-ligth-gray); color: var(--color-ligth); cursor: pointer;}
+
+/* DOCUMENT */
+.document {width: 100%;height: 60em;}
+
+/* FOOTER */
+footer.bottom {position: absolute;bottom: 0px;}
+footer {width: 100%;}
+
+/* ALERT */
+.alert {border-radius: 0.4em; font-size: large;}

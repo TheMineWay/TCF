@@ -106,3 +106,11 @@
 
 /* TOOLBAR */
 .toolbar.toolbar-primary > *:hover {color: var(--color-primary);}
+
+/* ALERT */
+.alert.alert-primary {background-color: var(--color-primary); color: var(--color-contrast-primary);}
+.alert.alert-secondary {background-color: var(--color-secondary); color: var(--color-contrast-secondary);}
+.alert.alert-success {background-color: var(--color-success); color: var(--color-contrast-success);}
+.alert.alert-warning {background-color: var(--color-warning); color: var(--color-contrast-warning);}
+.alert.alert-danger {background-color: var(--color-danger); color: var(--color-contrast-danger);}
+.alert.alert-complementary {background-color: var(--color-complementary); color: var(--color-contrast-complementary);}

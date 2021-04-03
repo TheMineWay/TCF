@@ -23,7 +23,7 @@ async function ImplementFullLocationForm(countrySelectId, regionSelectId) {
         
         // Data is on the device!
         const countrySelect = document.getElementById(countrySelectId);
-        countrySelect.innerHTML = "<option hidden selected>Selecciona una ciudad</option>";
+        countrySelect.innerHTML = "<option hidden selected>Selecciona un país</option>";
         for(let country of world) {
             //console.log(country.countryName);
             countrySelect.innerHTML += `<option>${country.countryName}</option>`;
