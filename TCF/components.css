@@ -88,9 +88,7 @@ a.nolink:hover {color: var(--color-ligth);}
     border-top-right-radius: var(--common-round-size);
     border-width: var(--common-card-border);
 }
-.card > .card-body {
-    margin: 1em 1em;
-}
+.card > .card-body {margin: 1em 1em;}
 
 /* BUTTONS */
 .btn {
@@ -210,3 +208,13 @@ img.zoomable:hover {transform: scale(1.075);}
 /* GRAPHIC */
 .graphic {width: 100%;}
 .graphic * {padding: 0.2em 0.2em 0.2em 0.2em};
+
+/* DISCOUNT */
+.discount-cross {text-decoration: line-through}
+
+/* TABLE */
+.table {
+    border: solid;
+}
+.table * {text-align: center;}
+.table.selectable tr:hover {background-color: var(--color-ligth-gray); color: var(--color-ligth); cursor: pointer;}

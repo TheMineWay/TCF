@@ -15,6 +15,7 @@
 
     /* OTHER */
     --color-gray: rgb(156, 156, 156);
+    --color-ligth-gray: rgb(190, 190, 190);
 
     /* CONTRAST COLORS */
     --color-contrast-primary: var(--color-ligth);
