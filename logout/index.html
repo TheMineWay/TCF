@@ -14,22 +14,30 @@
         <nav class="nav nav-primary">
             <ul class="main-nav">
                 <li class="nav-item active"><a class="nolink" href="../index.html">Menú principal</a></li>
-                <li class="nav-item"><a class="nolink" href="../tarifas/index.html">Tarifas</a></li>
+                <li class="nav-item"><a class="nolink" href="index.html">Tarifas</a></li>
                 <li class="nav-dropdown">
                     Cuenta
                     <div class="dropdown-content">
-                        <p><a class="nolink" href="../register/index.html">Crear cuenta</a></p>
-                        <p><a class="nolink" href="../login/index.html">Acceder</a></p>
-                        <p>Cerrar sesión</p>
+                        <p name="noauth"><a class="nolink" href="../register/index.html">Crear cuenta</a></p>
+                        <p name="noauth"><a class="nolink" href="../login/index.html">Acceder</a></p>
+                        <p name="auth"><a class="nolink" href="../logout/index.html">Cerrar sesión</a></p>
                     </div>
                 </li>
                 <li class="nav-item"><a class="nolink" href="../clientarea/index.html">Zona cliente</a></li>
             </ul>
         </nav>
 
-        <section class="container-md">
-            <h3>Términos y condiciones de uso</h3>
-            <embed src="../resources/pdf/terminos.pdf" class="document">
+        <section class="container-md h-center">
+            <h1>Se ha cerrado la sesión correctamente</h1>
+            <p>¡Esperamos volver a verte pronto!</p>
+            <div class="row">
+                <div class="col-xl-4"><p></p></div>
+                <div class="col-xl-4">
+                    <img src="../resources/img/bye.gif" style="width: 100%;" class="zoomable mb-3">
+                    <button class="btn btn-primary fade"><a href="../index.html" class="nolink" style="text-decoration: none;">Volver al menú principal</a></button>
+                </div>
+                <div class="col-xl-4"><p></p></div>
+            </div>
         </section>
 
         <!-- FOOTER -->
@@ -44,5 +52,12 @@
 				<li class="nav-item"><a class="material-icons nolink" href="https://goo.gl/maps/QGVMRPcXBaiSUd6b9" target="_blank">map</a></li>
 			</ul>
 		</footer>
+
+        <!-- SCRIPTS -->
+        <script src="../TCF/js/tcf.js"></script>
+        <script src="../TCF/js/auth.js"></script>
+        <script>
+            Logout();
+        </script>
     </body>
 </html>
