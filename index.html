@@ -18,16 +18,16 @@
                 <li class="nav-dropdown">
                     Cuenta
                     <div class="dropdown-content">
-                        <p><a class="nolink" href="register/index.html">Crear cuenta</a></p>
-                        <p><a class="nolink" href="login/index.html">Acceder</a></p>
-                        <hr>
-                        <p><a class="nolink" href="account/index.html">Mi perfil</a></p>
-                        <p>Cerrar sesión</p>
+                        <p name="noauth"><a class="nolink" href="register/index.html">Crear cuenta</a></p>
+                        <p name="noauth"><a class="nolink" href="login/index.html">Acceder</a></p>
+                        <p name="auth"><a class="nolink" href="account/index.html">Configuración</a></p>
+                        <p name="auth"><a class="nolink" href="logout/index.html">Cerrar sesión</a></p>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nolink" href="clientarea/index.html">Zona cliente</a></li>
+                <li class="nav-item" name="auth"><a class="nolink" href="clientarea/index.html">Zona cliente</a></li>
             </ul>
         </nav>
+
         <!-- MAIN CONTENT -->
         <section class="container-md">
             <h1 class="text-primary">Somos tu banco</h1>
@@ -95,6 +95,7 @@
                 </div>
             </section>
         </section>
+
         <!-- FOOTER -->
         <br><footer class="nav nav-primary">
             <ul class="main-nav">
@@ -106,5 +107,8 @@
                 <li class="nav-item"><a class="material-icons nolink" href="https://goo.gl/maps/QGVMRPcXBaiSUd6b9" target="_blank">map</a></li>
             </ul>
         </footer>
+
+        <script src="TCF/js/auth.js"></script>
+        <script src="TCF/js/tcf.js"></script>
     </body>
 </html>

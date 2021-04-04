@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joel Campos">
+        <meta name="description" content="Un banco justo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EBank</title>
+        <link rel="stylesheet" type="text/css" href="../TCF/tcf.css">
+        <link rel="icon" href="../favicon.ico">
+    </head>
+    <body>
+        <!-- NAVEGACIÓN -->
+        <nav class="nav nav-primary">
+            <ul class="main-nav">
+                <li class="nav-item active"><a class="nolink" href="../index.html">Menú principal</a></li>
+                <li class="nav-item"><a class="nolink" href="../tarifas/index.html">Tarifas</a></li>
+                <li class="nav-dropdown">
+                    Cuenta
+                    <div class="dropdown-content">
+                        <p name="noauth"><a class="nolink" href="../register/index.html">Crear cuenta</a></p>
+                        <p name="noauth"><a class="nolink" href="../login/index.html">Acceder</a></p>
+                        <p name="auth"><a class="nolink" href="../account/index.html">Configuración</a></p>
+                        <p name="auth"><a class="nolink" href="../logout/index.html">Cerrar sesión</a></p>
+                    </div>
+                </li>
+                <li class="nav-item" name="auth"><a class="nolink" href="../clientarea/index.html">Zona cliente</a></li>
+            </ul>
+        </nav>
+
+        <section class="container-xl">
+            <form method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Datos de acceso</h3>
+                        <div class="form-control">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="input input-primary" id="email" name="email" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-control">
+                                    <label>Nueva contraseña</label>
+                                    <input type="password" id="newpassword" class="input input-primary" name="password">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <br><button type="button" style="width: 100%;" class="btn btn-primary material-icons" id="btn-newpassword" onclick="TogglePassword('btn-newpassword','newpassword')">visibility_off</button>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="form-control">
+                                    <label>Repetir nueva contraseña</label>
+                                    <input type="password" id="newpasswordagain" class="input input-primary" name="repeat_password">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <br><button type="button" style="width: 100%;" class="btn btn-primary material-icons" id="btn-newpasswordagain" onclick="TogglePassword('btn-newpasswordagain','newpasswordagain')">visibility_off</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Información personal</h3>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" name="name" class="input input-primary" value="Ada" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="surname">Apellidos</label>
+                                    <input type="text" id="surname" name="surname" class="input input-primary" value="Lovelace" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="phone">Teléfono</label>
+                                    <input type="text" class="input input-primary" id="phone" name="phone" pattern="[0-9]{9}" maxlength="9" value="555765592" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="dir">Dirección</label>
+                                    <input type="text" class="input input-primary" id="dir" name="dir" value="Woodford Green" required>
+                                </div>
+                            </div>
+                            <!-- Región y país -->
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="country">País</label>
+                                    <select id="country" class="input input-primary"> <!-- La clase "input" es compatible con "select" --> </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="region">Región</label>
+                                    <select id="region" class="input input-primary"> <!-- La clase "input" es compatible con "select" --> </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="cp">Código postal</label>
+                                    <input type="text" id="cp" name="cp" value="08952" maxlength="5" pattern="[0-9]{5}" class="input input-primary">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="dni">DNI</label>
+                                    <input type="text" id="dni" name="dni" value="82993434G" maxlength="9" pattern="[0-9]{8}[a-Z]{1}" class="input input-primary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="form-control">
+                                    <label for="bd">Fecha de nacimiento</label>
+                                    <input type="date" class="input input-primary" id="bd" name="bd" value="1815-12-10" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Información adicional</h3>
+                        <div class="row">
+                            <div class="col-xxl-6">
+                                <div class="form-control">
+                                    <label>Género</label>
+                                    <div class="row">
+                                        <input type="radio" name="gender" id="g-m" checked>
+                                        <label for="g-m">Mujer</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" name="gender" id="g-h">
+                                        <label for="g-h">Hombre</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" name="gender" id="g-o">
+                                        <label for="g-o">Otro</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" name="gender" id="g-pnd">
+                                        <label for="g-pnd">Prefiero no decirlo</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6">
+                                <div class="form-control">
+                                    <label>Usar pronombres</label>
+                                    <div class="row">
+                                        <input type="radio" name="refgender" id="r-f" checked>
+                                        <label for="r-f">Femeninos</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" name="refgender" id="r-m">
+                                        <label for="r-m">Masculinos</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" name="refgender" id="r-i">
+                                        <label for="r-i">Inclusivos</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h3>Tema</h3>
+                        <label for="theme">Tema principal</label>
+                        <input type="color" id="theme">
+                        <input class="btn btn-primary" onclick="SetTheme('#304ffe')" type="button" value="Reiniciar tema">
+                        <input class="btn btn-primary" onclick="SetTheme('#121212')" type="button" value="Aplicar tema oscuro">
+                    </div>
+                </div>
+                <hr>
+                <input type="submit" value="Guardar cambios" class="btn btn-primary">
+            </form>
+        </section>
+
+        <!-- FOOTER -->
+		<br><footer class="nav nav-primary bottom">
+			<ul class="main-nav">
+				<li class="nav-item">&copy; EBank 2021</li>
+				<li class="nav-item"><a class="nolink" href="../privacy/index.html">Política de privacidad</a></li>
+				<li class="nav-item"><a class="nolink" href="../terms/index.html">Condiciones de uso</a></li>
+				<li class="nav-item">Teléfono: 555 34 71 89</li>
+				<li class="nav-item">Email: contacto@ebank.com</li>
+				<li class="nav-item">Encuéntranos en: Barcelona, Vía Laietana 439</li>
+				<li class="nav-item"><a class="material-icons nolink" href="https://goo.gl/maps/QGVMRPcXBaiSUd6b9" target="_blank">map</a></li>
+			</ul>
+		</footer>
+
+        <!-- SCRIPTS -->
+        <script src="../TCF/js/tcf.js"></script>
+        <script src="../TCF/js/auth.js"></script>
+        <script src="../TCF/js/cartograph.js"></script>
+
+        <script>
+            document.getElementById("email").value = sessionStorage.getItem("email") || "ada@gmail.com";
+
+            ImplementFullLocationForm("country","region","235","112");
+
+
+            const theme = document.getElementById("theme");
+            theme.value = sessionStorage.getItem("theme") || "#304ffe";
+            theme.addEventListener('input',() => {
+                sessionStorage.setItem("theme",theme.value);
+                document.documentElement.style.setProperty('--color-primary', theme.value);
+                document.documentElement.style.setProperty('--color-contrast-primary', getContrastYIQ(theme.value));
+            });
+
+            function SetTheme(color) {
+                theme.value = color;
+                sessionStorage.setItem("theme",color);
+                document.documentElement.style.setProperty('--color-primary', color);
+                document.documentElement.style.setProperty('--color-contrast-primary', getContrastYIQ(color));
+            }
+
+            function getContrastYIQ(hexcolor){ // Esta función es copiada de Internet :(
+                hexcolor = hexcolor.replace("#", "");
+                var r = parseInt(hexcolor.substr(0,2),16);
+                var g = parseInt(hexcolor.substr(2,2),16);
+                var b = parseInt(hexcolor.substr(4,2),16);
+                var yiq = ((r*299)+(g*587)+(b*114))/1000;
+                return (yiq >= 128) ? 'black' : 'white';
+}           
+        </script>
+    </body>
+</html>

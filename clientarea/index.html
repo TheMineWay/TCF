@@ -18,12 +18,13 @@
                 <li class="nav-dropdown">
                     Cuenta
                     <div class="dropdown-content">
-                        <p><a class="nolink" href="../register/index.html">Crear cuenta</a></p>
-                        <p><a class="nolink" href="../login/index.html">Acceder</a></p>
-                        <p>Cerrar sesión</p>
+                        <p name="noauth"><a class="nolink" href="../register/index.html">Crear cuenta</a></p>
+                        <p name="noauth"><a class="nolink" href="../login/index.html">Acceder</a></p>
+                        <p name="auth"><a class="nolink" href="../account/index.html">Configuración</a></p>
+                        <p name="auth"><a class="nolink" href="../logout/index.html">Cerrar sesión</a></p>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nolink" href="index.html">Zona cliente</a></li>
+                <li class="nav-item" name="auth"><a class="nolink" href="../clientarea/index.html">Zona cliente</a></li>
             </ul>
         </nav>
 
@@ -108,6 +109,7 @@
         <!-- SCRIPTS -->
         <script src="../TCF/js/tcf.js"></script>
         <script src="../TCF/js/database.js"></script>
+        <script src="../TCF/js/auth.js"></script>
         <script>
             DisplayData();
             DisplayAccounts();

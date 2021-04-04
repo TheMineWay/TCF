@@ -17,7 +17,7 @@ let getJSON = function(url, callback) {
 let world = {};
 
 /* HTML IMPLEMENTATION */
-async function ImplementFullLocationForm(countrySelectId, regionSelectId) {
+async function ImplementFullLocationForm(countrySelectId, regionSelectId, country, region) {
     await getJSON('https://raw.githubusercontent.com/country-regions/country-region-data/master/data.json',async (error, data) => {
         world = data;
         
@@ -30,11 +30,21 @@ async function ImplementFullLocationForm(countrySelectId, regionSelectId) {
         }
         const regionSelect = document.getElementById(regionSelectId);
         countrySelect.addEventListener('input',() => {
-            regionSelect.innerHTML = "<option hidden selected>Selecciona una región</option>";
-            for(let region of FindCountry(countrySelect.value).regions) {
-                regionSelect.innerHTML += `<option>${region.name} (${region.shortCode})</option>`;
-            }
+            UpdateRegionList();
         });
+
+        if(country != undefined) {
+            countrySelect.selectedIndex = country;
+            UpdateRegionList();
+            if(region != undefined) regionSelect.selectedIndex = region;
+        }
+
+        function UpdateRegionList() {
+            regionSelect.innerHTML = "<option hidden selected>Selecciona una región</option>";
+                for(let region of FindCountry(countrySelect.value).regions) {
+                    regionSelect.innerHTML += `<option>${region.name} (${region.shortCode})</option>`;
+                }
+        }
     });
 
     function FindCountry(name) {

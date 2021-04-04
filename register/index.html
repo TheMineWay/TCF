@@ -11,21 +11,24 @@
 		<!-- NAVEGACIÓN -->
         <nav class="nav nav-primary">
             <ul class="main-nav">
-                <li class="nav-item active"><a href="../index.html">Menú principal</a></li>
+                <li class="nav-item active"><a class="nolink" href="../index.html">Menú principal</a></li>
                 <li class="nav-item"><a class="nolink" href="../tarifas/index.html">Tarifas</a></li>
                 <li class="nav-dropdown">
                     Cuenta
                     <div class="dropdown-content">
-                        <p><a href="index.html">Crear cuenta</a></p>
-                        <p><a href="../login/index.html">Acceder</a></p>
-                        <p>Cerrar sesión</p>
+                        <p name="noauth"><a class="nolink" href="../register/index.html">Crear cuenta</a></p>
+                        <p name="noauth"><a class="nolink" href="../login/index.html">Acceder</a></p>
+                        <p name="auth"><a class="nolink" href="../account/index.html">Configuración</a></p>
+                        <p name="auth"><a class="nolink" href="../logout/index.html">Cerrar sesión</a></p>
                     </div>
                 </li>
+                <li class="nav-item" name="auth"><a class="nolink" href="../clientarea/index.html">Zona cliente</a></li>
             </ul>
         </nav>
+		
         <!-- FORMULARIO -->
        	<section class="container-lg">
-       		<form>
+       		<form method="POST" action="../index.html" onsubmit="Login()">
        			<h2>Crear cuenta</h2>
        			<hr>
        			<div class="row">
@@ -150,8 +153,12 @@
        			</div>
 			</form>
        	</section>
+
+		<!-- SCRIPTS -->
+
         <script src="../TCF/js/tcf.js"></script>
 		<script src="../TCF/js/cartograph.js"></script>
+		<script src="../TCF/js/auth.js"></script>
 
 		<!-- FOOTER -->
 		<br><footer class="nav nav-primary bottom">

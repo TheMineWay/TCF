@@ -28,3 +28,4 @@ function NavToggle(id) {
     const navList = document.getElementById(id);
     
 }
+document.documentElement.style.setProperty('--color-primary', sessionStorage.getItem("theme")); // Aplicar tema
