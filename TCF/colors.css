@@ -31,7 +31,7 @@
 
 /* BACKGROUND */
 
-.bg-primary {background-color: var(--color-primary);}
+.bg-primary {background-color: var(--color-primary); color: var(--color-contrast-primary);}
 .bg-secondary {background-color: var(--color-secondary);}
 .bg-success {background-color: var(--color-success);}
 .bg-warning {background-color: var(--color-warning);}

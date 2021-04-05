@@ -89,25 +89,25 @@
                             <div class="col-xl-6">
                                 <div class="form-control">
                                     <label for="country">País</label>
-                                    <select id="country" class="input input-primary"> <!-- La clase "input" es compatible con "select" --> </select>
+                                    <select id="country" class="input input-primary" required> <!-- La clase "input" es compatible con "select" --> </select>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-control">
                                     <label for="region">Región</label>
-                                    <select id="region" class="input input-primary"> <!-- La clase "input" es compatible con "select" --> </select>
+                                    <select id="region" class="input input-primary" required> <!-- La clase "input" es compatible con "select" --> </select>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-control">
                                     <label for="cp">Código postal</label>
-                                    <input type="text" id="cp" name="cp" value="08952" maxlength="5" pattern="[0-9]{5}" class="input input-primary">
+                                    <input type="text" id="cp" name="cp" value="08952" maxlength="5" pattern="[0-9]{5}" class="input input-primary" required>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-control">
                                     <label for="dni">DNI</label>
-                                    <input type="text" id="dni" name="dni" value="82993434G" maxlength="9" pattern="[0-9]{8}[a-Z]{1}" class="input input-primary">
+                                    <input type="text" id="dni" name="dni" value="82993434G" maxlength="9" pattern="[0-9]{8}[a-Z]{1}" class="input input-primary" required>
                                 </div>
                             </div>
                         </div>
@@ -169,6 +169,7 @@
                         <input type="color" id="theme">
                         <input class="btn btn-primary" onclick="SetTheme('#304ffe')" type="button" value="Reiniciar tema">
                         <input class="btn btn-primary" onclick="SetTheme('#121212')" type="button" value="Aplicar tema oscuro">
+                        <br><small>Te recomendamos que utilices temas oficiales, pero siempre puedes personalizarlo utilizando el selector de color.</small>
                     </div>
                 </div>
                 <hr>
@@ -213,16 +214,7 @@
                 sessionStorage.setItem("theme",color);
                 document.documentElement.style.setProperty('--color-primary', color);
                 document.documentElement.style.setProperty('--color-contrast-primary', getContrastYIQ(color));
-            }
-
-            function getContrastYIQ(hexcolor){ // Esta función es copiada de Internet :(
-                hexcolor = hexcolor.replace("#", "");
-                var r = parseInt(hexcolor.substr(0,2),16);
-                var g = parseInt(hexcolor.substr(2,2),16);
-                var b = parseInt(hexcolor.substr(4,2),16);
-                var yiq = ((r*299)+(g*587)+(b*114))/1000;
-                return (yiq >= 128) ? 'black' : 'white';
-}           
+            }         
         </script>
     </body>
 </html>

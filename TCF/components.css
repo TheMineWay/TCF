@@ -42,10 +42,6 @@
 .nav-ligth .dropdown-content {background-color: var(--color-ligth);}
 .nav-dark .dropdown-content {background-color: var(--color-dark);}
 
-.nav .brand {
-
-}
-
 /* Link style */
 a.nolink:hover {color: var(--color-ligth);}
 
@@ -164,14 +160,6 @@ a.nolink:hover {color: var(--color-ligth);}
 .infobox > .infobox-header > * {margin-left: var(--common-infobox-margin);}
 .infobox p {font-size: medium;}
 
-/* SLIDESHOW */
-.slideshow-item {
-    display:none;
-}
-.slideshow {
-
-}
-
 /* RANGLE */
 .rangle .rangle-body > * {margin: 20px 20px;}
 
@@ -183,7 +171,6 @@ img.zoomable:hover {transform: scale(1.075);}
 .expo {padding-left: 0.4em;padding-right: 0.4em; padding-bottom: 0.4em;}
 
 /* ENTRY LIST */
-.entrylist {}
 .entrylist .entry {border: solid;}
 .entry + .entry {border-top: none;}
 .entrylist > .entry > * {margin: 0.1em 0.1em 0.1em 0.1em;display: inline;}
@@ -213,9 +200,7 @@ img.zoomable:hover {transform: scale(1.075);}
 .discount-cross {text-decoration: line-through}
 
 /* TABLE */
-.table {
-    border: solid;
-}
+.table {border: solid;}
 .table th {padding: 0.3em 0.3em 0.3em 0.3em;}
 .table * {text-align: center;}
 .table.selectable tr:hover {background-color: var(--color-ligth-gray); color: var(--color-ligth); cursor: pointer;}
